@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    Valorant Dashboard 
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <nav>
+    <button onclick="loadAgents()">Agents</button>
+    <button onclick="loadMaps()">Maps</button>
+    <button onclick="loadWeapons()">Weapons</button>
+  </nav>
+
+  <div class="controls">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+    <div class="filter-box" id="filterBox"></div>
+  </div>
+
+  <div class="spinner" id="spinner">Loading...</div>
+  <div class="container" id="content"></div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
